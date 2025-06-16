@@ -1,4 +1,4 @@
 # Hexybot
 
-Simulation of a costum designed Hexapod on PyBullet.
+Simulation of a custom designed Hexapod on PyBullet.
 

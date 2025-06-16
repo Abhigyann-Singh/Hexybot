@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Hexybot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0362961482107395 -0.016136099480918 -0.0302238925968727"
+        rpy="0 0 0" />
+      <mass
+        value="0.348716563629928" />
+      <inertia
+        ixx="0.00121632161547816"
+        ixy="2.63771405343575E-08"
+        ixz="8.94666769589299E-10"
+        iyy="0.00121689714148571"
+        iyz="-2.13592556940495E-08"
+        izz="0.00241755683271426" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="1_1">
+    <inertial>
+      <origin
+        xyz="-0.0324143971560813 -0.0119954828073387 5.41790912282417E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0831083959766699" />
+      <inertia
+        ixx="1.83854901396944E-05"
+        ixy="-1.04764195649455E-06"
+        ixz="-3.95555025497812E-07"
+        iyy="2.5253002001055E-05"
+        iyz="-9.35099460279389E-07"
+        izz="1.84595866059747E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_1_1"
+    type="revolute">
+    <origin
+      xyz="0.09573 -0.016152 0"
+      rpy="1.281 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="1_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="1_2">
+    <inertial>
+      <origin
+        xyz="-0.0660480250727562 0.00267607742551941 -0.0134131085256413"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310336E-06"
+        ixz="3.68956436722859E-06"
+        iyy="8.57401070624248E-05"
+        iyz="-1.48833773537329E-07"
+        izz="6.57787261558976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_1_1_2"
+    type="revolute">
+    <origin
+      xyz="-0.045127 -0.024 0"
+      rpy="0 0 1.2224" />
+    <parent
+      link="1_1" />
+    <child
+      link="1_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="1_3">
+    <inertial>
+      <origin
+        xyz="-0.0522325679209618 -0.0181507220987475 0.0143077407854749"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518261116830356" />
+      <inertia
+        ixx="7.91190176311023E-05"
+        ixy="-2.09235102995172E-05"
+        ixz="6.09863722023096E-20"
+        iyy="6.70169800836734E-05"
+        iyz="7.41153828847513E-20"
+        izz="5.8890613746851E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/1_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_2_1_3"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 0"
+      rpy="-3.1416 0 0.13813" />
+    <parent
+      link="1_2" />
+    <child
+      link="1_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="2_1">
+    <inertial>
+      <origin
+        xyz="0.00611022556989236 -0.0103227758517485 0.0358313941760022"
+        rpy="0 0 0" />
+      <mass
+        value="0.083108415470142" />
+      <inertia
+        ixx="2.10110599159992E-05"
+        ixy="-3.42017694293567E-06"
+        ixz="-1.88260753834009E-07"
+        iyy="2.2701537722076E-05"
+        iyz="1.10389216606998E-06"
+        izz="1.8385491988511E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_2_1"
+    type="revolute">
+    <origin
+      xyz="0.029635 0.098129 0.003417"
+      rpy="3.1416 0 0.29616" />
+    <parent
+      link="base_link" />
+    <child
+      link="2_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="2_2">
+    <inertial>
+      <origin
+        xyz="-0.0660480250727568 0.00267607742552023 0.021575178588893"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310338E-06"
+        ixz="3.68956436722858E-06"
+        iyy="8.57401070624247E-05"
+        iyz="-1.48833773537327E-07"
+        izz="6.57787261558976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2_1_2_2"
+    type="revolute">
+    <origin
+      xyz="-0.018058 -0.038394 0.048544"
+      rpy="1.5708 0.3484 2.1007" />
+    <parent
+      link="2_1" />
+    <child
+      link="2_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="2_3">
+    <inertial>
+      <origin
+        xyz="0.0262375892873183 -0.0499566115985929 0.037406002217721"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518261116830355" />
+      <inertia
+        ixx="9.45809223489306E-05"
+        ixy="-1.53236541738029E-06"
+        ixz="2.74142208663149E-06"
+        iyy="5.13932191137728E-05"
+        iyz="-7.24703577889787E-07"
+        izz="5.90524699989238E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/2_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2_2_2_3"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 -0.018378"
+      rpy="-0.080086 0.07983 -2.3287" />
+    <parent
+      link="2_2" />
+    <child
+      link="2_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="3_1">
+    <inertial>
+      <origin
+        xyz="0.00460363462952386 -0.0110770543568071 -0.0358313912874928"
+        rpy="0 0 0" />
+      <mass
+        value="0.0831083830671431" />
+      <inertia
+        ixx="1.8813285240212E-05"
+        ixy="-1.77542608592108E-06"
+        ixz="7.71001818608903E-07"
+        iyy="2.48992998166613E-05"
+        iyz="-8.12140807099101E-07"
+        izz="1.8385488766488E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_3_1"
+    type="revolute">
+    <origin
+      xyz="-0.10238 0.098029 0.003417"
+      rpy="0 0 -2.7266" />
+    <parent
+      link="base_link" />
+    <child
+      link="3_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="3_2">
+    <inertial>
+      <origin
+        xyz="-0.0660480250727568 0.0026760774255206 0.0215751785888917"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310336E-06"
+        ixz="3.68956436722863E-06"
+        iyy="8.57401070624249E-05"
+        iyz="-1.48833773537324E-07"
+        izz="6.57787261558977E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="31_32"
+    type="revolute">
+    <origin
+      xyz="0.041559 -0.0085469 -0.048544"
+      rpy="-1.5708 -0.3484 1.9692" />
+    <parent
+      link="3_1" />
+    <child
+      link="3_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="3_3">
+    <inertial>
+      <origin
+        xyz="-0.0216931488507502 -0.0273633121592585 0.0312418999195549"
+        rpy="0 0 0" />
+      <mass
+        value="0.0853915174486207" />
+      <inertia
+        ixx="6.50391211473026E-05"
+        ixy="-1.49736834579984E-05"
+        ixz="-1.23549168120841E-06"
+        iyy="9.70313671788989E-05"
+        iyz="1.27849804853764E-06"
+        izz="6.46777909583075E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/3_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="32_33"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 -0.018378"
+      rpy="-0.080086 0.07983 -1.1257" />
+    <parent
+      link="3_2" />
+    <child
+      link="3_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="4_1">
+    <inertial>
+      <origin
+        xyz="0.00814143247399191 0.00880974576401097 -0.035831391114241"
+        rpy="0 0 0" />
+      <mass
+        value="0.0831083959766699" />
+      <inertia
+        ixx="2.24897917069097E-05"
+        ixy="3.4656478792623E-06"
+        ixz="4.15842704022568E-07"
+        iyy="2.12227969001201E-05"
+        iyz="1.03975588130845E-06"
+        izz="1.83854901396944E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_41"
+    type="revolute">
+    <origin
+      xyz="-0.1683 -0.016351 0.003417"
+      rpy="0 0 2.6021" />
+    <parent
+      link="base_link" />
+    <child
+      link="4_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="4_2">
+    <inertial>
+      <origin
+        xyz="-0.0660480250727571 0.00267607742552119 0.021575178588893"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310338E-06"
+        ixz="3.68956436722859E-06"
+        iyy="8.57401070624249E-05"
+        iyz="-1.48833773537329E-07"
+        izz="6.57787261558977E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="41_42"
+    type="revolute">
+    <origin
+      xyz="-0.0095938 0.04133 -0.048544"
+      rpy="-1.5708 -0.3484 -2.3123" />
+    <parent
+      link="4_1" />
+    <child
+      link="4_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="4_3">
+    <inertial>
+      <origin
+        xyz="0.0546620164491392 -0.00835187536053078 0.0390588437055052"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518261116830356" />
+      <inertia
+        ixx="7.12376296761462E-05"
+        ixy="2.17038673999407E-05"
+        ixz="1.6940658945086E-19"
+        iyy="7.48983680386295E-05"
+        iyz="-8.21621958836671E-20"
+        izz="5.88906137468511E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/4_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="42_43"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 -0.018378"
+      rpy="0 0 3.0969" />
+    <parent
+      link="4_2" />
+    <child
+      link="4_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="5_1">
+    <inertial>
+      <origin
+        xyz="0.0090867000834764 -0.00783111993225499 -0.0358313941760022"
+        rpy="0 0 0" />
+      <mass
+        value="0.0831084154701419" />
+      <inertia
+        ixx="2.14644758829927E-05"
+        ixy="-3.5012160617402E-06"
+        ixz="1.05354903212547E-06"
+        iyy="2.22481217550825E-05"
+        iyz="-3.79545073281566E-07"
+        izz="1.8385491988511E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_5_1"
+    type="revolute">
+    <origin
+      xyz="-0.10221 -0.13063 0.003417"
+      rpy="0 0 -1.0978" />
+    <parent
+      link="base_link" />
+    <child
+      link="5_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="5_2">
+    <inertial>
+      <origin
+        xyz="-0.0660480250727571 0.00267607742552095 0.0215751785888923"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310327E-06"
+        ixz="3.68956436722855E-06"
+        iyy="8.57401070624247E-05"
+        iyz="-1.48833773537322E-07"
+        izz="6.57787261558976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="51_52"
+    type="revolute">
+    <origin
+      xyz="0.040972 0.011021 -0.048544"
+      rpy="-1.5708 -0.3484 2.4348" />
+    <parent
+      link="5_1" />
+    <child
+      link="5_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="5_3">
+    <inertial>
+      <origin
+        xyz="-0.0344910087453941 -0.0482316240416505 0.03267053556287"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518261116830355" />
+      <inertia
+        ixx="5.70985073395734E-05"
+        ixy="-1.46933395018034E-05"
+        ixz="-1.32307631284402E-06"
+        iyy="8.90440945914106E-05"
+        iyz="1.24078820291747E-06"
+        izz="5.88840095306425E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/5_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="52_53"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 -0.018378"
+      rpy="-0.080086 0.07983 -1.1615" />
+    <parent
+      link="5_2" />
+    <child
+      link="5_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="6_1">
+    <inertial>
+      <origin
+        xyz="0.00360844500803981 0.0114400047923838 -0.0358313912874929"
+        rpy="0 0 0" />
+      <mass
+        value="0.0831083830671431" />
+      <inertia
+        ixx="1.95864079177999E-05"
+        ixy="2.69437469501781E-06"
+        ixz="-6.71378891696633E-08"
+        iyy="2.41261771390733E-05"
+        iyz="1.1178143847221E-06"
+        izz="1.8385488766488E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_61"
+    type="revolute">
+    <origin
+      xyz="0.029807 -0.13053 0.003417"
+      rpy="0 0 -2.0271" />
+    <parent
+      link="base_link" />
+    <child
+      link="6_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="6_2">
+    <inertial>
+      <origin
+        xyz="-0.066048025072757 0.00267607742552109 0.0215751785888921"
+        rpy="0 0 0" />
+      <mass
+        value="0.10621838803" />
+      <inertia
+        ixx="3.65898938174288E-05"
+        ixy="1.99420519310337E-06"
+        ixz="3.68956436722863E-06"
+        iyy="8.57401070624248E-05"
+        iyz="-1.48833773537313E-07"
+        izz="6.57787261558976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="61_62"
+    type="revolute">
+    <origin
+      xyz="-0.026299 0.033295 -0.048544"
+      rpy="-1.5708 -0.3484 -1.8718" />
+    <parent
+      link="6_1" />
+    <child
+      link="6_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="6_3">
+    <inertial>
+      <origin
+        xyz="0.0546620164491395 -0.00835187536053049 0.0390588437055033"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518261116830355" />
+      <inertia
+        ixx="7.12376296761461E-05"
+        ixy="2.17038673999407E-05"
+        ixz="-8.470329472543E-21"
+        iyy="7.48983680386294E-05"
+        iyz="1.14349447879331E-19"
+        izz="5.88906137468511E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Hexybot/meshes/6_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="62_63"
+    type="revolute">
+    <origin
+      xyz="-0.086966 0.003523 -0.018378"
+      rpy="0 0 3.0969" />
+    <parent
+      link="6_2" />
+    <child
+      link="6_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

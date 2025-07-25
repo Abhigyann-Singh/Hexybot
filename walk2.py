@@ -18,8 +18,6 @@ robot_id = p.loadURDF(
     useFixedBase=False
 )
 
-
-
 # Map link names to joint indices
 link_name_to_index = {}
 for i in range(p.getNumJoints(robot_id)):
@@ -29,8 +27,6 @@ for i in range(p.getNumJoints(robot_id)):
 print("Link names and indices:")
 for name, index in link_name_to_index.items():
     print(f"{name}: {index}")
-    
-
 # Apply joint limits to all revolute joints
 limit = math.radians(180)
 for ji in link_name_to_index.values():
@@ -55,28 +51,23 @@ def leg_joints(n):
 
 # Set all joints to position control (no force)
 for ji in link_name_to_index.values():
-    p.setJointMotorControl2(robot_id, ji, p.POSITION_CONTROL, force=0)
+    p.setJointMotorControl2(robot_id, ji, p.POSITION_CONTROL, force=3)
 
-# === GAIT PARAMETERS ===
 STANCE    = [0.0, 0.7, -1.3]  # [coxa, femur, tibia]
-LIFT      = 1              # femur lift angle
-SWING     = 0.6               # coxa swing magnitude (rad)
-STEP_SIZE = 0.04              # body shift (unused in ripple)
-DURATION  = 0.3              # seconds per sub-phase
+LIFT      = 1              
+SWING     = 0.9              
+STEP_SIZE = 0.04              
+DURATION  = 0.1              
 
-# Define left/right legs (adjust to your URDF)
 LEFT_LEGS  = {1, 6, 5}
 RIGHT_LEGS = {2, 4, 3}
 
 def swing_for_leg(leg):
-    """Return signed swing: +SWING on left side, -SWING on right side."""
     return SWING if leg in LEFT_LEGS else -SWING
 
-# Gait sequence: opposite leg pairs
 LIFT_PAIRS    = [(2, 5), (6,3)]
 SUPPORT_PAIRS = [(2,5), (6,3)]
 
-# Move one leg to given pose
 def set_leg_pose(leg, pose, vel=5):
     j0, j1, j2 = leg_joints(leg)
     p.setJointMotorControl2(robot_id, j0, p.POSITION_CONTROL,
@@ -124,9 +115,9 @@ def walk(cycles=3):
         # Set friction for all tibia links (1_3, 2_3, ..., 6_3)
 TIBIA_LINKS = [link_name_to_index[f"{n}_3"] for n in range(1, 7)]
 for link in TIBIA_LINKS:
-    p.changeDynamics(robot_id, link, lateralFriction=1.2)
+    p.changeDynamics(robot_id, link, lateralFriction=2)
         # Set friction for the ground as well (optional)
-    p.changeDynamics(plane_id, -1, lateralFriction=1.2)
+    p.changeDynamics(plane_id, -1, lateralFriction=2)
 # === MAIN ===
 if __name__ == '__main__':
     # Move all legs to initial stance
@@ -138,9 +129,12 @@ if __name__ == '__main__':
     set_leg_pose(4, [STANCE[0] , LIFT, STANCE[2]])  # Set second leg to stance quickly
 
     print("Starting ripple gait (forward)")
-    walk(cycles=10)
+    walk(cycles=15)
     print("Done.")
-
+ 
+    # Print current base position and orientation
+    pos, orn = p.getBasePositionAndOrientation(robot_id)
+    print(f"Base position: {pos}, orientation (quaternion): {orn}")
     # Keep GUI alive
     while True:
         p.stepSimulation()
